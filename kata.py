@@ -1,3 +1,5 @@
+import math
+
 "#1. First Python code :D"
 
 def boolean_to_string(b):
@@ -18,4 +20,35 @@ def dna_to_rna(dna):
     return rna_string
 
 
-dna_to_rna("TTGACCGCCGCC")            
+"#3. Bad day but still trying some Python"
+"This one is pretty easy"
+
+def greet(name, owner):
+    if name == owner:
+        return 	'Hello boss'
+    else:
+        return 'Hello guest'
+
+
+def litres(time):
+    ans = time * 0.5
+    return math.floor(ans)
+
+
+
+def even_or_odd(number):
+    return "Even" if number % 2 == 0 else "Odd"
+
+
+def digitize(n):
+    string = str(n.reverse())
+    arrayed = []
+    for x in string:
+        arrayed.append(x)
+
+    
+
+    return arrayed
+
+
+print(digitize(869))
