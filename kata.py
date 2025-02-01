@@ -40,15 +40,22 @@ def even_or_odd(number):
     return "Even" if number % 2 == 0 else "Odd"
 
 
-def digitize(n):
-    string = str(n.reverse())
-    arrayed = []
-    for x in string:
-        arrayed.append(x)
-
-    
-
-    return arrayed
+# def digitize(n):
+#     string = str(n.reverse())
+#     arrayed = []
+#     for x in string:
+#         arrayed.append(x)
+#     return arrayed
 
 
-print(digitize(869))
+# print(digitize(869))
+
+
+def count_by(x, n):
+    result = []
+    for i in range(1,n+1):
+        result.append(x * i)
+    return result
+
+
+print(count_by(2, 5))
