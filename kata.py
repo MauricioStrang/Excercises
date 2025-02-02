@@ -58,4 +58,23 @@ def count_by(x, n):
     return result
 
 
-print(count_by(2, 5))
+
+def count_positives_sum_negatives(arr):
+    positives = 0
+    negatives = 0
+    for x in arr:
+        if x > 0:
+            positives +=1
+        elif x < 0:
+            negatives += x
+        else:
+            print("0 found")
+    result = [positives, negatives]
+    if positives == 0 and negatives == 0:
+        return []
+    else:
+        return result
+
+
+
+print(count_positives_sum_negatives([0, 0]))
