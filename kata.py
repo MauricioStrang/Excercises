@@ -51,6 +51,7 @@ def even_or_odd(number):
 # print(digitize(869))
 
 
+#WRONG
 def count_by(x, n):
     result = []
     for i in range(1,n+1):
@@ -58,7 +59,7 @@ def count_by(x, n):
     return result
 
 
-
+#WRONG
 def count_positives_sum_negatives(arr):
     positives = 0
     negatives = 0
@@ -77,4 +78,19 @@ def count_positives_sum_negatives(arr):
 
 
 
-print(count_positives_sum_negatives([0, 0]))
+
+def get_grade(s1, s2, s3):
+    average = (s1 + s2 + s3) // 3
+    if average < 60:
+        return 'F'
+    elif average < 70:
+        return 'D'
+    elif average < 80:
+        return 'C'
+    elif average < 90:
+        return 'B'
+    else: 
+        return 'A'
+
+
+print(get_grade(70, 70, 100))
