@@ -93,4 +93,33 @@ def get_grade(s1, s2, s3):
         return 'A'
 
 
-print(get_grade(70, 70, 100))
+def repeat_str(repeat, string):
+    return string * repeat
+
+
+
+def zero_fuel(distance_to_pump, mpg, fuel_left):    
+    if mpg * fuel_left >= distance_to_pump:
+        return True
+    else:
+        return False
+
+
+def area_or_perimeter(l , w):
+    if l == w:
+        return l * w
+    else:
+        return l * 2 + w * 2
+
+print(area_or_perimeter(6, 10))
+
+
+
+def add_binary(a,b):
+    c = a + b
+
+    return bin(c)[2:]
+
+
+
+print(add_binary(2, 1))
