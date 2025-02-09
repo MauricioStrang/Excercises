@@ -111,8 +111,6 @@ def area_or_perimeter(l , w):
     else:
         return l * 2 + w * 2
 
-print(area_or_perimeter(6, 10))
-
 
 
 def add_binary(a,b):
@@ -122,4 +120,12 @@ def add_binary(a,b):
 
 
 
-print(add_binary(2, 1))
+
+def make_negative( number ):
+    if number < 0:
+        return number
+    else:
+        return -number
+
+
+print(make_negative(5))
