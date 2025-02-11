@@ -128,4 +128,13 @@ def make_negative( number ):
         return -number
 
 
-print(make_negative(5))
+
+def sum_two_smallest_numbers(numbers):
+
+    ordered = []
+
+    for x in numbers:
+        if x > ordered[]
+
+
+print(sum_two_smallest_numbers([19, 5, 42, 2, 77]))
