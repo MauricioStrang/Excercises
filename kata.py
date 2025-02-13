@@ -134,15 +134,19 @@ def to_jaden_case(string):
 
 
 
-    # def sum_two_smallest_numbers(numbers):
+def sum_two_smallest_numbers(numbers):
 
-    #     ordered = []
+    n = len(numbers) - 1
 
-    #         for x in numbers
-    #         if x > ordered[]
+    for i in range(n):
+        for j in range(n):
+            if numbers[j] > numbers[j + 1]:
+                numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
+
+    return numbers
 
 
-print(to_jaden_case('hello there'))
+print(sum_two_smallest_numbers([500, 5, 3, 8, 1, 2, 7]))
 
 
 
