@@ -129,15 +129,20 @@ def make_negative( number ):
 
 
 
-def sum_two_smallest_numbers(numbers):
-
-    ordered = []
-
-    for x in numbers:
-        if x > ordered[]
+def to_jaden_case(string):
+    return ' '.join(word.capitalize() for word in string.split())
 
 
-print(sum_two_smallest_numbers([19, 5, 42, 2, 77]))
+
+    # def sum_two_smallest_numbers(numbers):
+
+    #     ordered = []
+
+    #         for x in numbers
+    #         if x > ordered[]
+
+
+print(to_jaden_case('hello there'))
 
 
 
