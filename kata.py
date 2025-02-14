@@ -146,7 +146,22 @@ def sum_two_smallest_numbers(numbers):
     return numbers
 
 
-print(sum_two_smallest_numbers([500, 5, 3, 8, 1, 2, 7]))
 
 
+def smash(words):   
+    n = len(words)
+    complete = ''
+    for i in range(n):
+        print(i, n)
+        complete += words[i]
+        if i != n -1:
+            complete += ' '
+    return complete
 
+
+def smashImproved(words):
+    return " ".join(words)
+
+
+print(smashImproved(['hello', 'world', 'this', 'is', 'great'])) 
+    
