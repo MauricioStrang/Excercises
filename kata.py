@@ -178,12 +178,26 @@ def is_squareImproved(n):
 
 
 
-
 def greet(name):
     return f"Hello, {name}, how are you doing today?"
 
 
-print(greet('mauriex'))
+
+def points(games):
+    score = 0
+    for i in range(len(games)):
+        if games[i][0] > games[i][2]:
+            score += 3
+        elif games[i][0] == games[i][2]:
+            score += 1
+    return score
+
+
+
+print(points(['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3']))
+
+
+
 
 
 # def digitize(n):
