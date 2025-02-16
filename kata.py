@@ -40,17 +40,6 @@ def even_or_odd(number):
     return "Even" if number % 2 == 0 else "Odd"
 
 
-# def digitize(n):
-#     string = str(n.reverse())
-#     arrayed = []
-#     for x in string:
-#         arrayed.append(x)
-#     return arrayed
-
-
-# print(digitize(869))
-
-
 #WRONG
 def count_by(x, n):
     result = []
@@ -163,5 +152,47 @@ def smashImproved(words):
     return " ".join(words)
 
 
-print(smashImproved(['hello', 'world', 'this', 'is', 'great'])) 
-    
+def sum_array(a):
+    result = 0
+    for x in a:
+        result += x
+    return result
+
+
+
+def sum_arrayImproved(a):
+  return sum(a)
+
+
+
+
+
+def is_square(n):    
+    root = math.isqrt(n)
+    if root * root == n: return True
+    else: return False
+
+
+def is_squareImproved(n): 
+    return n >= 0 and (n**0.5) % 1 == 0 
+
+
+
+
+def greet(name):
+    return f"Hello, {name}, how are you doing today?"
+
+
+print(greet('mauriex'))
+
+
+# def digitize(n):
+#     string = str(n.reverse())
+#     arrayed = []
+#     for x in string:
+#         arrayed.append(x)
+#     return arrayed
+
+
+# print(digitize(869))
+
