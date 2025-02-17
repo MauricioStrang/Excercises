@@ -194,19 +194,53 @@ def points(games):
 
 
 
-print(points(['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3']))
+
+def rps(p1, p2):
+    if p1 == 'scissors' and p2 == 'paper':
+        return "Player 1 won!"
+    elif p1 == 'paper' and p2 == 'scissors':
+        return "Player 2 won!"
+
+    elif p1 == 'rock' and p2 == 'scissors':
+        return "Player 1 won!"
+    elif p1 == 'scissors' and p2 == 'rock':
+        return "Player 2 won!"
+        
+    elif p1 == 'paper' and p2 == 'rock':
+        return "Player 1 won!"
+    elif p1 == 'rock' and p2 == 'paper':
+        return "Player 2 won!"
+    
+    else:
+        return 'Draw!'
 
 
 
+def rps(p1, p2):
+    beats = {'rock': 'scissors', 'scissors': 'paper', 'paper': 'rock'}
+    if beats[p1] == p2:
+        return "Player 1 won!"
+    if beats[p2] == p1:
+        return "Player 2 won!"
+    return "Draw!"
 
 
-# def digitize(n):
-#     string = str(n.reverse())
-#     arrayed = []
-#     for x in string:
-#         arrayed.append(x)
-#     return arrayed
+
+def rental_car_cost(d):
+    total = 0
+    if d >= 7:
+        total -= 50
+    elif d >= 3:
+        total -= 20 
+    for i in range(d):
+        total += 40
+    return total
 
 
-# print(digitize(869))
+
+def digitize(n):
+    digits = list(map(int, str(n)))
+    return digits
+
+print(digitize(869))
 
