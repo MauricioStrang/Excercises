@@ -242,5 +242,12 @@ def digitize(n):
     digits = list(map(int, str(n)))
     return digits
 
-print(digitize(869))
+
+def century(year):
+    if len(str(year)) < 2:
+        return year[0] + 1
+
+    return 0
+
+print(century(869))
 
