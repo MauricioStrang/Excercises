@@ -243,11 +243,17 @@ def digitize(n):
     return digits
 
 
-def century(year):
-    if len(str(year)) < 2:
-        return year[0] + 1
 
-    return 0
+def open_or_senior(data):
+    num = len(data)
+    for i in range(num):
+        print(data[i][0])
+        if data[i][0] >= 55 and data[i][1] > 7:
+            data[i] = "Senior"
+        else:
+            data[i] = "Open"
+    return data
 
-print(century(869))
+
+print(open_or_senior([(16, 23),(73,1),(56, 20),(1, -1)]))
 
