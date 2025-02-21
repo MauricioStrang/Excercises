@@ -255,5 +255,43 @@ def open_or_senior(data):
     return data
 
 
-print(open_or_senior([(16, 23),(73,1),(56, 20),(1, -1)]))
 
+
+
+def summation(num): 
+    result = 0
+    for i in range(num):
+        result += num - i
+    return result
+
+
+
+def printer_error(s):
+    list = ['a','b','c','d','e','f','g','h','i','j','k','l','m',]
+    total_s = len(s)
+    error = 0
+    for i in range(total_s):
+        if s[i] not in list:
+            error += 1
+    return str(error) + "/" + str(total_s)
+
+
+def printer_error_improved(s):
+     return "{}/{}".format(len([x for x in s if x not in "abcdefghijklm"]), len(s))
+   
+
+def sum_mix(arr):
+    total = 0
+    for i in range(len(arr)):
+        total += int(arr[i])
+    return total
+
+
+
+#Remember to use sum() and then map()
+#So basically, map() applies a parameter to the second parameter
+def sum_mix_improved(arr):
+    return sum(map(int, arr))
+
+print(sum_mix_improved(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
+    
