@@ -293,5 +293,31 @@ def sum_mix(arr):
 def sum_mix_improved(arr):
     return sum(map(int, arr))
 
-print(sum_mix_improved(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
+def count_sheeps(sheep):
+    count = 0
+    for x in sheep:
+        if x == True:
+            count += 1
+    return count
+
+
+#Using count method
+def count_sheeps_improved(sheep):
+    return sheep.count(True)
+
+#Splicing, getting from index 1 to -1
+def remove_char(s):
+    return s[1:-1]
+
+
+def check(seq, elem):
+    for x in seq:
+        if x == elem:
+            return True
+    return False
+
+def check_improved(seq, elem):
+    return elem in seq
+
+print(check('fuck you', 'ccar'))
     
