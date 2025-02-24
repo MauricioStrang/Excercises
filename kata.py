@@ -318,6 +318,7 @@ def check(seq, elem):
 
 def check_improved(seq, elem):
     return elem in seq
-
-print(check('fuck you', 'ccar'))
     
+
+def get_volume_of_cuboid(length, width, height):
+    return (width * height) * length
