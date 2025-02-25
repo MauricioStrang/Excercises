@@ -322,3 +322,11 @@ def check_improved(seq, elem):
 
 def get_volume_of_cuboid(length, width, height):
     return (width * height) * length
+
+
+def hero(bullets, dragons):
+    return bullets / 2 >= dragons
+
+
+
+print(hero(10, 5))
