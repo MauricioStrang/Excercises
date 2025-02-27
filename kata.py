@@ -328,5 +328,35 @@ def hero(bullets, dragons):
     return bullets / 2 >= dragons
 
 
+##FIRST 6KYU Find The Parity Outlier
+def find_outlier(integers):
+    even = 0
+    odd = 0
 
-print(hero(10, 5))
+    if integers[0] % 2 == 0:
+        even += 1
+    else:
+        odd += 1
+    if integers[1] % 2 == 0:
+        even += 1
+    else:
+        odd += 1   
+    if integers[2] % 2 == 0:
+        even += 1
+    else:
+        odd += 1
+
+    
+    if even > odd:
+        for x in integers:
+            if x % 2 != 0:
+                return x
+    else:
+        for x in integers:
+            if x % 2 == 0:
+                return x
+
+
+
+
+print(find_outlier([40,40,40,40,40,40, 1]))
