@@ -359,14 +359,17 @@ def find_outlier(integers):
 
 
 
-def bouncing_ball(h, bounce, window)
+def bouncing_ball(h, bounce, window):
     if h > 0 and bounce > 0 and bounce < 1 and window < h:
-        counter = 0
-        resting = h
-        while resting < window:
-            resting * bounce
-            counter +=1
-
+        # At the beginning, we make counter once since the mom will see it at least one time when thrown from the top
+        counter = 1
+        # We also adjust the resting before the while loop to count the first bounce so we know if we even enter the loop
+        resting = h * bounce
+        while resting > window:
+            resting *= bounce
+            counter +=2  # Since we are starting counting at one means that the mom has seen the ball go down, so if it enter the loop
+                         # That means it will bounce over the window so the mom will see it go up and down again, hence the *= 2 to the counter
+        return counter
     else:
         return -1
 
