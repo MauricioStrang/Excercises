@@ -359,4 +359,16 @@ def find_outlier(integers):
 
 
 
-print(find_outlier([40,40,40,40,40,40, 1]))
+def bouncing_ball(h, bounce, window)
+    if h > 0 and bounce > 0 and bounce < 1 and window < h:
+        counter = 0
+        resting = h
+        while resting < window:
+            resting * bounce
+            counter +=1
+
+    else:
+        return -1
+
+
+print(bouncing_ball(30, 0.75, 1.5))
