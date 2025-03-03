@@ -374,4 +374,16 @@ def bouncing_ball(h, bounce, window):
         return -1
 
 
-print(bouncing_ball(30, 0.75, 1.5))
+
+def is_pangram(st):
+    list = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    ready = st.lower()
+    for x in list:
+        print(x)
+        if x not in ready:
+            return False
+    return True
+
+
+    
+print(is_pangram("ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ"))
