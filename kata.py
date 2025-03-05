@@ -393,4 +393,24 @@ def find_it(seq):
         if count % 2 != 0:
             return num
     
-print(find_it([1,2,2,3,3,3,4,3,3,3,2,2,1]))
+
+
+def unique_in_order(sequence):
+    if not sequence:
+        return []    
+    result = [sequence[0]]
+    for item in sequence[1:]:
+        if item != result[-1]:
+            result.append(item)
+    return result
+
+
+def first_non_repeating_letter(s):
+    counts = Counter(s.lower())
+    result = ''
+    for count in counts.items():
+        if result == '' and count[1] == 1:
+            result = count[0] 
+    return result
+
+print(first_non_repeating_letter('sTreSS'))
