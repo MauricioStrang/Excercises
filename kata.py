@@ -385,5 +385,12 @@ def is_pangram(st):
     return True
 
 
+from collections import Counter
+
+def find_it(seq):
+    counts = Counter(seq) #Makes an object with the counter of each element in the array
+    for num, count in counts.items():
+        if count % 2 != 0:
+            return num
     
-print(is_pangram("ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ"))
+print(find_it([1,2,2,3,3,3,4,3,3,3,2,2,1]))
