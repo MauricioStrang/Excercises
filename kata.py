@@ -414,16 +414,11 @@ def first_non_repeating_letter(s):
     return result
 
 
-
-def longest(s1, s2):
-    order = ["a", "b", "c","d", "e", "f","g", "h", "i","j", "k", "l","m", "n", "o","p", "q", "r","s", "t", "u", "v", "w", "x","y", "z"]
-    s1_order = [s1[0]]
-
-    for letter in s1:
-        if 
+def is_square(n):    
+    if n < 0:
+        return False
+    sqrt_n = int(math.sqrt(n))
+    return sqrt_n * sqrt_n == n
 
 
-    return
-
-
-print(longest("aretheyhere", "yestheyarehere"))
+print(is_square(26))
