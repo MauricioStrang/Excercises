@@ -421,4 +421,12 @@ def is_square(n):
     return sqrt_n * sqrt_n == n
 
 
-print(is_square(26))
+def count_by(x, n):
+    result = []
+    for i in range(1, n + 1):
+        result.append(i * x)
+        x-1
+    return result
+    
+
+print(count_by(74, 17))
