@@ -428,5 +428,8 @@ def count_by(x, n):
         x-1
     return result
     
+def sum_mix(arr):
+    return sum(map(int, arr))
 
-print(count_by(74, 17))
+
+print(sum_mix([9, 3, '7', '3']))
