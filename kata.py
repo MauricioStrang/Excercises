@@ -432,4 +432,20 @@ def sum_mix(arr):
     return sum(map(int, arr))
 
 
-print(sum_mix([9, 3, '7', '3']))
+def solution(text, ending):
+    if len(text) < len(ending):
+        return False
+    reversed_text = ''
+    reversed_ending = ''
+    for ch in text:
+        reversed_text = ch + reversed_text
+
+    for ch in ending:
+        reversed_ending = ch + reversed_ending
+
+    for i in range(len(ending)):
+        if reversed_text[i] != reversed_ending[i]:
+            return False
+    return True
+
+print(solution("abcabc","bc"))
