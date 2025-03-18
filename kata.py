@@ -448,4 +448,18 @@ def solution(text, ending):
             return False
     return True
 
-print(solution("abcabc","bc"))
+
+def disemvowel(string_):
+    vowels = "aeiouAEIOU"
+    new_string_ = ""
+    for char in string_:
+        if char not in vowels:
+            new_string_ += char
+    return new_string_
+
+def disemvowel_improved(string_):
+    vowels = "aeiouAEIOU"
+    return "".join(map(lambda char: "" if char in vowels else char, string_))
+            
+
+print(disemvowel_improved("This shit is for loosers xdd"))
