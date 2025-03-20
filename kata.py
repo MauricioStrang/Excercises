@@ -460,6 +460,13 @@ def disemvowel(string_):
 def disemvowel_improved(string_):
     vowels = "aeiouAEIOU"
     return "".join(map(lambda char: "" if char in vowels else char, string_))
-            
+        # map() produces an iterable, which isn't directly usable as a string.
+        # "".join(...) joins all characters together into a final string.
 
-print(disemvowel_improved("This shit is for loosers xdd"))
+
+def filter_list(l):
+        # We iterate over lst and check if each item is an integer using isinstance(item, int).
+
+        return [item for item in l if isinstance(item, int)]
+
+print(filter_list([1, 2, 'aasf', '1', '123', 123]))
