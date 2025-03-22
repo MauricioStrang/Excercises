@@ -466,7 +466,35 @@ def disemvowel_improved(string_):
 
 def filter_list(l):
         # We iterate over lst and check if each item is an integer using isinstance(item, int).
-
         return [item for item in l if isinstance(item, int)]
 
-print(filter_list([1, 2, 'aasf', '1', '123', 123]))
+
+def dig_pow(n, p):
+    # first we separate the numbers in an array of numbers
+    str_n = str(n)
+    list_n = [item for item in str_n]
+    int_n = list(map(int, list_n))
+
+    # then we power each of the number for the array and sum it together into big_num
+    big_num = 0
+    for num in int_n: 
+        big_num += num ** p
+        p+=1
+
+    # we set the base multiplator for comparison and a result to track when we are equal or passed the big_num, aka no n * k equals to big_num
+    k= 1
+    result = 0
+    while result < big_num:
+        result = n * k
+        k+=1  
+
+    # we return k mins one because of how the while loop works
+    if result == big_num:
+        return k -1
+    
+    # no big_n == n*k? return -1
+    return -1
+
+
+
+print(dig_pow(41, 5))
