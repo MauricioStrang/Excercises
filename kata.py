@@ -497,4 +497,11 @@ def dig_pow(n, p):
 
 
 
-print(dig_pow(41, 5))
+def kata_13_december(lst): 
+    new_lst = []
+    for i in range(len(lst)): 
+        if lst[i] % 2 !=0: 
+            new_lst.append(lst[i])
+    return new_lst
+
+print(kata_13_december([1, 2, 2, 2, 4, 3, 4, 5, 6, 7]))
