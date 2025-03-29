@@ -537,3 +537,33 @@ def DNA_strand(dna):
 def DNA_strand_improved(dna):
     pairs = {'A':'T','T':'A','C':'G','G':'C'}
     return ''.join([pairs[x] for x in dna])
+
+
+# God please forgive my ignorance
+def order(sentence):
+    nums = '123456789'
+    separated = []
+    ordered = []
+    word = ''
+    for char in sentence:
+        if char != ' ':
+            word += char
+        else:
+            separated.append(word)
+            word = ''
+    separated.append(word)
+    
+    while len(ordered) < len(separated):
+        ordered.append('')
+
+    for word in separated:
+        for char in word:
+            if char in nums:
+                ordered[int(char) - 1] = word 
+
+    while "" in ordered:
+        ordered.remove("")
+
+    return ' '.join(ordered)
+
+print(order("4of Fo1r pe6ople g3ood th5e the2"))
