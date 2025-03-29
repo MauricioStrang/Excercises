@@ -504,4 +504,36 @@ def kata_13_december(lst):
             new_lst.append(lst[i])
     return new_lst
 
-print(kata_13_december([1, 2, 2, 2, 4, 3, 4, 5, 6, 7]))
+
+def get_sum(a, b):
+    if a == b:
+        return a  # If both numbers are the same, return one of them
+    
+    result = 0
+    counter = min(a, b)  # Start from the smaller number
+    end = max(a, b)  # End at the larger number
+    
+    while counter <= end:  # Include both a and b
+        result += counter
+        counter += 1
+    
+    return result
+
+
+def DNA_strand(dna):
+    result = ''
+    for char in dna:
+        if char == 'T':
+            result += 'A'
+        elif char == 'A':
+            result+= 'T'
+        elif char == 'C':
+            result+= 'G'
+        elif char =='G':
+            result+= 'C'
+    return result
+
+
+def DNA_strand_improved(dna):
+    pairs = {'A':'T','T':'A','C':'G','G':'C'}
+    return ''.join([pairs[x] for x in dna])
