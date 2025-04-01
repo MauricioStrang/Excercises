@@ -566,4 +566,12 @@ def order(sentence):
 
     return ' '.join(ordered)
 
+
+def friend(x):
+    result = []
+    for each in x:
+        if len(each) == 4:
+            result.append(each)
+    return result
+
 print(order("4of Fo1r pe6ople g3ood th5e the2"))
