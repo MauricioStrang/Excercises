@@ -576,15 +576,6 @@ def friend(x):
 
 
 
-# def count_smileys(arr):
-#     result = 0
-#     for smile in arr:
-#         if smile[0] == ':' or  smile[0] == ";" and smile[1] == '-' or smile[1] == "~" or smile[1] == "" and smile[2] == 'D' or smile[2] == ")":
-#             result += 1
-#     return result
-
-# print(count_smileys([':)',':(',':D',':O',':;']))
-
 
 
 def letters_to_numbers(s):
@@ -599,4 +590,22 @@ def letters_to_numbers(s):
             result += values[char]
     return result
 
-print(letters_to_numbers('I Love You'))
+
+def is_isogram(string):
+    result = ''
+    for char in string:
+        if char.lower() not in result:
+            result += char.lower()
+        else:
+            return False
+    return True
+
+
+# def count_smileys(arr):
+#     result = 0
+#     for smile in arr:
+#         if smile[0] == ':' or  smile[0] == ";" and smile[1] == '-' or smile[1] == "~" or smile[1] == "" and smile[2] == 'D' or smile[2] == ")":
+#             result += 1
+#     return result
+
+# print(count_smileys([':)',':(',':D',':O',':;']))
