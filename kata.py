@@ -58,11 +58,10 @@ def count_positives_sum_negatives(arr):
         elif x < 0:
             negatives += x
         else:
-            print("0 found")
-    result = [positives, negatives]
+            result = [positives, negatives]
     if positives == 0 and negatives == 0:
         return []
-    else:
+    else: 
         return result
 
 
@@ -141,7 +140,6 @@ def smash(words):
     n = len(words)
     complete = ''
     for i in range(n):
-        print(i, n)
         complete += words[i]
         if i != n -1:
             complete += ' '
@@ -247,7 +245,6 @@ def digitize(n):
 def open_or_senior(data):
     num = len(data)
     for i in range(num):
-        print(data[i][0])
         if data[i][0] >= 55 and data[i][1] > 7:
             data[i] = "Senior"
         else:
@@ -379,7 +376,6 @@ def is_pangram(st):
     list = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     ready = st.lower()
     for x in list:
-        print(x)
         if x not in ready:
             return False
     return True
@@ -601,11 +597,20 @@ def is_isogram(string):
     return True
 
 
-# def count_smileys(arr):
-#     result = 0
-#     for smile in arr:
-#         if smile[0] == ':' or  smile[0] == ";" and smile[1] == '-' or smile[1] == "~" or smile[1] == "" and smile[2] == 'D' or smile[2] == ")":
-#             result += 1
-#     return result
+def hoop_count(n):
+    return "Keep at it until you get it" if n < 10 else "Great, now move on to tricks"
 
-# print(count_smileys([':)',':(',':D',':O',':;']))
+
+
+def count_smileys(arr):
+    result = 0
+    for smile in arr:
+        if len(smile) < 2:       
+            if smile[0] == ':' or  smile[0] == ";" and smile[1] == 'D' or smile[1] == ")":
+                result += 1
+            else:
+                if smile[0] == ':' or  smile[0] == ";" and smile[1] == '-' or smile[1] == "~" and smile[2] == 'D' or smile[2] == ")":
+                    result +=1
+    return result
+
+print(count_smileys([':)',':(',':D',':O',':;']))
