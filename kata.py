@@ -605,12 +605,12 @@ def hoop_count(n):
 def count_smileys(arr):
     result = 0
     for smile in arr:
-        if len(smile) < 2:       
-            if smile[0] == ':' or  smile[0] == ";" and smile[1] == 'D' or smile[1] == ")":
+        if len(smile) == 2:       
+            if smile[0] in (':', ';') and smile[1] in ('D',")"):
                 result += 1
-            else:
-                if smile[0] == ':' or  smile[0] == ";" and smile[1] == '-' or smile[1] == "~" and smile[2] == 'D' or smile[2] == ")":
+        elif len(smile)  == 3:
+            if smile[0] in (':', ';') and smile[1] in ('-',"~") and smile[2] in ('D',")"):
                     result +=1
     return result
 
-print(count_smileys([':)',':(',':D',':O',':;']))
+print(count_smileys([':)',':(',':D',':-D',':;']))

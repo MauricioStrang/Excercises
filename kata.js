@@ -31,5 +31,3 @@ const letters_to_numbers =(s)=>{
     }
     return result
 }
-
-console.log(letters_to_numbers('I Love You'))
