@@ -613,4 +613,9 @@ def count_smileys(arr):
                     result +=1
     return result
 
-print(count_smileys([':)',':(',':D',':-D',':;']))
+
+def find_needle(haystack):
+    if haystack.index('needle'):
+        return 'found the needle at position ' + str(haystack.index('needle'))
+
+print(find_needle(['3', '123124234', None, 'world', 'hay', 2, '3', True, False]))
