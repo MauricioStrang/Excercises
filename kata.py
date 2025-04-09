@@ -618,4 +618,10 @@ def find_needle(haystack):
     if haystack.index('needle'):
         return 'found the needle at position ' + str(haystack.index('needle'))
 
-print(find_needle(['3', '123124234', None, 'world', 'hay', 2, '3', True, False]))
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
