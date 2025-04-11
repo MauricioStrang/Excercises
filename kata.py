@@ -625,3 +625,22 @@ def bubble_sort(arr):
         for j in range(0, n - i - 1):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+
+def check_for_factor(base, factor):
+    return base % factor == 0
+
+
+def minimum(arr):
+    result = arr[0]
+    for i in arr:
+        if i < result:
+            result = i
+    return result
+
+def maximum(arr):
+    result = arr[0]
+    for i in arr:
+        if i > result:
+            result = i
+    return result
