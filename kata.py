@@ -666,21 +666,20 @@ def sum_two_smallest_numbers(numbers):
 
 # Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence,
 #  which is the number of times you must multiply the digits in num until you reach a single digit.
-def persistence(n):
-    result = 1
-    string = str(n)
-    arr_n = []
-    for char in string:
-        arr_n.append(int(char))
+# def persistence(n):
     
-    
-    for num in arr_n:
-        result *= num
-    while len(arr_n) > 1:
-        for num in str(result):
-            arr_n.append(int(num))
-    
-    return result
+#     listed = []
+
+#     while len(listed) > 1
 
 
-print(persistence(729))
+
+
+def number(bus_stops):
+    notte=0
+    ori=0
+    for i in bus_stops:
+        notte+=i[0]
+        ori+=i[1]
+    return notte - ori
+print(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]))
