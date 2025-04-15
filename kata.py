@@ -663,18 +663,6 @@ def sum_two_smallest_numbers(numbers):
     return sorted_nums[0] + sorted_nums[1]
 
 
-
-# Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence,
-#  which is the number of times you must multiply the digits in num until you reach a single digit.
-# def persistence(n):
-    
-#     listed = []
-
-#     while len(listed) > 1
-
-
-
-
 def number(bus_stops):
     notte=0
     ori=0
@@ -682,4 +670,23 @@ def number(bus_stops):
         notte+=i[0]
         ori+=i[1]
     return notte - ori
-print(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]))
+
+from functools import reduce
+def grow(arr):
+    return reduce(lambda x, y: x * y, arr)
+
+
+# Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence,
+#  which is the number of times you must multiply the digits in num until you reach a single digit.
+
+
+# for num in 
+
+# def persistence(n):
+    
+#         listed = []
+
+#         while len(listed) > 1
+
+
+print(grow([2, 2, 2, 2, 2, 2]))
