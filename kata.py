@@ -680,13 +680,24 @@ def grow(arr):
 #  which is the number of times you must multiply the digits in num until you reach a single digit.
 
 
-# for num in 
-
-# def persistence(n):
-    
-#         listed = []
-
-#         while len(listed) > 1
 
 
-print(grow([2, 2, 2, 2, 2, 2]))
+def persistence(n):
+        #We created an empty list
+        perm_list = []
+        #Then we separate the numbers in n and put them in listed so we can multiply them with eachother
+        for num in str(n):
+            perm_list.append(int(num))
+
+        while len(perm_list) > 1:
+            result = 1
+            temp_list = []
+            for i in perm_list:
+                result *= int(i)
+            
+            for j in str(result):
+                temp_list.append(j)
+            if len(temp_list) != 1:
+                perm_list = temp_list
+        return perm_list
+print(persistence(999))
