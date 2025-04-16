@@ -675,29 +675,60 @@ from functools import reduce
 def grow(arr):
     return reduce(lambda x, y: x * y, arr)
 
+#Fist own map and lambda function
+def invert(lst):
+    return list(map(lambda num:num *-1,lst))
+
+def twice_as_old(dad_years_old, son_years_old):
+    age = dad_years_old - son_years_old * 2
+    if age < 0:
+        return age *  -1
+    return age
+
+#First own sorted method
+def find_smallest_int(arr):
+    return sorted(arr)[0]
+
+
+def paperwork(n, m):
+    if n < 1 or m < 1:
+        return 0
+    return n * m
+
+
+def correct(s):
+    new_s = ''
+    for char in s:
+        if char == '5':
+            new_s+='S'
+        elif char == '1':
+            new_s+='I'
+        elif char == '0':
+            new_s+='O'
+        else:
+            new_s+=char
+    return new_s
+
+print(correct('DUBL1N'))
+
 
 # Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence,
 #  which is the number of times you must multiply the digits in num until you reach a single digit.
+# def persistence(n):
+#         #We created an empty list
+#         perm_list = []
+#         #Then we separate the numbers in n and put them in listed so we can multiply them with eachother
+#         for num in str(n):
+#             perm_list.append(int(num))
 
-
-
-
-def persistence(n):
-        #We created an empty list
-        perm_list = []
-        #Then we separate the numbers in n and put them in listed so we can multiply them with eachother
-        for num in str(n):
-            perm_list.append(int(num))
-
-        while len(perm_list) > 1:
-            result = 1
-            temp_list = []
-            for i in perm_list:
-                result *= int(i)
+#         while len(perm_list) > 1:
+#             result = 1
+#             temp_list = []
+#             for i in perm_list:
+#                 result *= int(i)
             
-            for j in str(result):
-                temp_list.append(j)
-            if len(temp_list) != 1:
-                perm_list = temp_list
-        return perm_list
-print(persistence(999))
+#             for j in str(result):
+#                 temp_list.append(j)
+#             if len(temp_list) != 1:
+#                 perm_list = temp_list
+#     return perm_list
