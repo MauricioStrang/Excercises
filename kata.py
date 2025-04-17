@@ -709,26 +709,19 @@ def correct(s):
             new_s+=char
     return new_s
 
-print(correct('DUBL1N'))
-
 
 # Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence,
 #  which is the number of times you must multiply the digits in num until you reach a single digit.
-# def persistence(n):
-#         #We created an empty list
-#         perm_list = []
-#         #Then we separate the numbers in n and put them in listed so we can multiply them with eachother
-#         for num in str(n):
-#             perm_list.append(int(num))
+def persistence(n):
+    multiplications = 0
+    while len(str(n)) > 1:
+        listed = []
+        for each in str(n):
+            listed.append(int(each))
+        n = 1
+        for num in listed:
+            n *= num
+        multiplications +=1
+    return multiplications
 
-#         while len(perm_list) > 1:
-#             result = 1
-#             temp_list = []
-#             for i in perm_list:
-#                 result *= int(i)
-            
-#             for j in str(result):
-#                 temp_list.append(j)
-#             if len(temp_list) != 1:
-#                 perm_list = temp_list
-#     return perm_list
+print(persistence(999))
