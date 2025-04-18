@@ -724,4 +724,16 @@ def persistence(n):
         multiplications +=1
     return multiplications
 
-print(persistence(999))
+def reverse_words(text):
+    s = []
+    str = ''
+    for char in text:
+        if char == ' ':
+            s.append(str)
+            str=''
+        str += char
+    s.append(str)
+    return s
+
+
+print(reverse_words('Demasiado papu'))
