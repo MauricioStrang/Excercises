@@ -34,37 +34,8 @@ def litres(time):
     ans = time * 0.5
     return math.floor(ans)
 
-
-
 def even_or_odd(number):
     return "Even" if number % 2 == 0 else "Odd"
-
-
-#WRONG
-def count_by(x, n):
-    result = []
-    for i in range(1,n+1):
-        result.append(x * i)
-    return result
-
-
-#WRONG
-def count_positives_sum_negatives(arr):
-    positives = 0
-    negatives = 0
-    for x in arr:
-        if x > 0:
-            positives +=1
-        elif x < 0:
-            negatives += x
-        else:
-            result = [positives, negatives]
-    if positives == 0 and negatives == 0:
-        return []
-    else: 
-        return result
-
-
 
 
 def get_grade(s1, s2, s3):
@@ -352,8 +323,6 @@ def find_outlier(integers):
         for x in integers:
             if x % 2 == 0:
                 return x
-
-
 
 
 def bouncing_ball(h, bounce, window):
@@ -696,6 +665,8 @@ def paperwork(n, m):
     return n * m
 
 
+
+
 def correct(s):
     new_s = ''
     for char in s:
@@ -710,8 +681,8 @@ def correct(s):
     return new_s
 
 
-# Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence,
-#  which is the number of times you must multiply the digits in num until you reach a single digit.
+
+
 def persistence(n):
     multiplications = 0
     while len(str(n)) > 1:
@@ -724,16 +695,40 @@ def persistence(n):
         multiplications +=1
     return multiplications
 
-def reverse_words(text):
-    s = []
-    str = ''
-    for char in text:
-        if char == ' ':
-            s.append(str)
-            str=''
-        str += char
-    s.append(str)
-    return s
 
+
+def reverse_words(text):
+    s=''
+    reverted = []
+    for char in text:
+        if char != ' ':
+            s = char + s
+        else:
+            reverted.append(s)
+            s = ''
+    reverted.append(s)
+    return ' '.join(reverted)
 
 print(reverse_words('Demasiado papu'))
+
+
+# First attempt, sooo inneficient
+def is_valid_walk(walk):
+    n_s= False
+    e_w = False
+    if len(walk) != 10:
+        return False
+    if 'n' in walk and 's' in walk:  
+        if walk.count('n') == walk.count('s'):
+            n_s = True
+            if walk.count('n') == 5:
+                return True
+    if 'e' in walk and 'w' in walk:
+        if walk.count('e') == walk.count('w'):
+            e_w = True
+            if walk.count('e') == 5:
+                return True  
+    if n_s == True and e_w == True:
+        return True
+    
+    return False
