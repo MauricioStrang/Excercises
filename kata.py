@@ -1,14 +1,16 @@
 import math
 
-"#1. First Python code :D"
 
+
+
+
+"#1. First Python code :D"
 def boolean_to_string(b):
     return "True" if b else "False"
 
 
 "#2. Still learning Syntaxis"
 "Create a function which translates a given DNA string into RNA."
-
 def dna_to_rna(dna):
     rna = []
     for x in dna:
@@ -22,7 +24,6 @@ def dna_to_rna(dna):
 
 "#3. Bad day but still trying some Python"
 "This one is pretty easy"
-
 def greet(name, owner):
     if name == owner:
         return 	'Hello boss'
@@ -33,6 +34,7 @@ def greet(name, owner):
 def litres(time):
     ans = time * 0.5
     return math.floor(ans)
+
 
 def even_or_odd(number):
     return "Even" if number % 2 == 0 else "Odd"
@@ -56,7 +58,6 @@ def repeat_str(repeat, string):
     return string * repeat
 
 
-
 def zero_fuel(distance_to_pump, mpg, fuel_left):    
     if mpg * fuel_left >= distance_to_pump:
         return True
@@ -71,13 +72,10 @@ def area_or_perimeter(l , w):
         return l * 2 + w * 2
 
 
-
 def add_binary(a,b):
     c = a + b
 
     return bin(c)[2:]
-
-
 
 
 def make_negative( number ):
@@ -87,10 +85,8 @@ def make_negative( number ):
         return -number
 
 
-
 def to_jaden_case(string):
     return ' '.join(word.capitalize() for word in string.split())
-
 
 
 def sum_two_smallest_numbers(numbers):
@@ -103,8 +99,6 @@ def sum_two_smallest_numbers(numbers):
                 numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
 
     return numbers
-
-
 
 
 def smash(words):   
@@ -128,12 +122,8 @@ def sum_array(a):
     return result
 
 
-
 def sum_arrayImproved(a):
   return sum(a)
-
-
-
 
 
 def is_square(n):    
@@ -146,10 +136,8 @@ def is_squareImproved(n):
     return n >= 0 and (n**0.5) % 1 == 0 
 
 
-
 def greet(name):
     return f"Hello, {name}, how are you doing today?"
-
 
 
 def points(games):
@@ -160,8 +148,6 @@ def points(games):
         elif games[i][0] == games[i][2]:
             score += 1
     return score
-
-
 
 
 def rps(p1, p2):
@@ -184,7 +170,6 @@ def rps(p1, p2):
         return 'Draw!'
 
 
-
 def rps(p1, p2):
     beats = {'rock': 'scissors', 'scissors': 'paper', 'paper': 'rock'}
     if beats[p1] == p2:
@@ -192,7 +177,6 @@ def rps(p1, p2):
     if beats[p2] == p1:
         return "Player 2 won!"
     return "Draw!"
-
 
 
 def rental_car_cost(d):
@@ -206,11 +190,9 @@ def rental_car_cost(d):
     return total
 
 
-
 def digitize(n):
     digits = list(map(int, str(n)))
     return digits
-
 
 
 def open_or_senior(data):
@@ -223,15 +205,11 @@ def open_or_senior(data):
     return data
 
 
-
-
-
 def summation(num): 
     result = 0
     for i in range(num):
         result += num - i
     return result
-
 
 
 def printer_error(s):
@@ -255,11 +233,11 @@ def sum_mix(arr):
     return total
 
 
-
 #Remember to use sum() and then map()
 #So basically, map() applies a parameter to the second parameter
 def sum_mix_improved(arr):
     return sum(map(int, arr))
+
 
 def count_sheeps(sheep):
     count = 0
@@ -273,6 +251,7 @@ def count_sheeps(sheep):
 def count_sheeps_improved(sheep):
     return sheep.count(True)
 
+
 #Splicing, getting from index 1 to -1
 def remove_char(s):
     return s[1:-1]
@@ -283,6 +262,7 @@ def check(seq, elem):
         if x == elem:
             return True
     return False
+
 
 def check_improved(seq, elem):
     return elem in seq
@@ -313,8 +293,7 @@ def find_outlier(integers):
         even += 1
     else:
         odd += 1
-
-    
+  
     if even > odd:
         for x in integers:
             if x % 2 != 0:
@@ -340,7 +319,6 @@ def bouncing_ball(h, bounce, window):
         return -1
 
 
-
 def is_pangram(st):
     list = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     ready = st.lower()
@@ -351,14 +329,12 @@ def is_pangram(st):
 
 
 from collections import Counter
-
 def find_it(seq):
     counts = Counter(seq) #Makes an object with the counter of each element in the array
     for num, count in counts.items():
         if count % 2 != 0:
             return num
     
-
 
 def unique_in_order(sequence):
     if not sequence:
@@ -392,7 +368,8 @@ def count_by(x, n):
         result.append(i * x)
         x-1
     return result
-    
+
+
 def sum_mix(arr):
     return sum(map(int, arr))
 
@@ -422,6 +399,7 @@ def disemvowel(string_):
             new_string_ += char
     return new_string_
 
+
 def disemvowel_improved(string_):
     vowels = "aeiouAEIOU"
     return "".join(map(lambda char: "" if char in vowels else char, string_))
@@ -439,27 +417,22 @@ def dig_pow(n, p):
     str_n = str(n)
     list_n = [item for item in str_n]
     int_n = list(map(int, list_n))
-
     # then we power each of the number for the array and sum it together into big_num
     big_num = 0
     for num in int_n: 
         big_num += num ** p
         p+=1
-
     # we set the base multiplator for comparison and a result to track when we are equal or passed the big_num, aka no n * k equals to big_num
     k= 1
     result = 0
     while result < big_num:
         result = n * k
         k+=1  
-
     # we return k mins one because of how the while loop works
     if result == big_num:
         return k -1
-    
     # no big_n == n*k? return -1
     return -1
-
 
 
 def kata_13_december(lst): 
@@ -540,9 +513,6 @@ def friend(x):
     return result
 
 
-
-
-
 def letters_to_numbers(s):
     values = {'a': 1, 'b': 2, 'c': 3, 'd': 4,'e': 5, 'f': 6, 'g': 7, 'h': 8,'i': 9, 'j': 10, 'k': 11, 'l': 12,'m': 13, 
             'n': 14, 'o': 15, 'p': 16,'q': 17, 'r': 18, 's': 19, 't': 20,'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25,'z': 26,
@@ -568,7 +538,6 @@ def is_isogram(string):
 
 def hoop_count(n):
     return "Keep at it until you get it" if n < 10 else "Great, now move on to tricks"
-
 
 
 def count_smileys(arr):
@@ -607,6 +576,7 @@ def minimum(arr):
             result = i
     return result
 
+
 def maximum(arr):
     result = arr[0]
     for i in arr:
@@ -627,6 +597,7 @@ def sum_two_smallest_numbers_long(numbers):
             num_2 = n
     return num_1 + num_2
 
+
 def sum_two_smallest_numbers(numbers):
     sorted_nums = sorted(numbers)
     return sorted_nums[0] + sorted_nums[1]
@@ -640,19 +611,23 @@ def number(bus_stops):
         ori+=i[1]
     return notte - ori
 
+
 from functools import reduce
 def grow(arr):
     return reduce(lambda x, y: x * y, arr)
 
+
 #Fist own map and lambda function
 def invert(lst):
     return list(map(lambda num:num *-1,lst))
+
 
 def twice_as_old(dad_years_old, son_years_old):
     age = dad_years_old - son_years_old * 2
     if age < 0:
         return age *  -1
     return age
+
 
 #First own sorted method
 def find_smallest_int(arr):
@@ -663,8 +638,6 @@ def paperwork(n, m):
     if n < 1 or m < 1:
         return 0
     return n * m
-
-
 
 
 def correct(s):
@@ -681,8 +654,6 @@ def correct(s):
     return new_s
 
 
-
-
 def persistence(n):
     multiplications = 0
     while len(str(n)) > 1:
@@ -696,7 +667,6 @@ def persistence(n):
     return multiplications
 
 
-
 def reverse_words(text):
     s=''
     reverted = []
@@ -708,8 +678,6 @@ def reverse_words(text):
             s = ''
     reverted.append(s)
     return ' '.join(reverted)
-
-print(reverse_words('Demasiado papu'))
 
 
 # First attempt, sooo inneficient
@@ -729,6 +697,21 @@ def is_valid_walk(walk):
             if walk.count('e') == 5:
                 return True  
     if n_s == True and e_w == True:
-        return True
-    
+        return True 
     return False
+
+
+def lovefunc( flower1, flower2 ):
+    return flower1 % 2 != flower2 % 2
+
+
+def get_count(sentence):
+    dic = ['a','e','i','o','u']
+    count=0
+    for char in sentence:
+        if char in dic:
+            count += 1
+    return count
+
+
+print(get_count('aveces si xd a'))
