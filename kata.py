@@ -705,6 +705,7 @@ def lovefunc( flower1, flower2 ):
     return flower1 % 2 != flower2 % 2
 
 
+#7Kyu
 def get_count(sentence):
     dic = ['a','e','i','o','u']
     count=0
@@ -712,6 +713,15 @@ def get_count(sentence):
         if char in dic:
             count += 1
     return count
+#Improved version
+def get_count_improved(sentence):
+    vowels = "aeiou"
+    return sum(1 for char in sentence if char in vowels)
 
 
-print(get_count('aveces si xd a'))
+def get_middle(s):
+    if len(s) % 2 != 0:
+        return s[len(s) // 2]
+    return s[len(s) // 2 -1] + s[len(s) // 2]
+    
+print(get_middle('abcd'))
