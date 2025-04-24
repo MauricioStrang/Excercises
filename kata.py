@@ -724,4 +724,19 @@ def get_middle(s):
         return s[len(s) // 2]
     return s[len(s) // 2 -1] + s[len(s) // 2]
     
-print(get_middle('abcd'))
+
+# def wave(people):
+#     result = []
+    
+
+#     for char in people:
+#         string = ''
+#         for char in range(people):
+            
+
+#     return people[2].upper()
+    # for char in range(people):
+    #     string = people[char]
+        
+
+print(wave('hello'))
