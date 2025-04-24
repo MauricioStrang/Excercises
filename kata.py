@@ -725,18 +725,18 @@ def get_middle(s):
     return s[len(s) // 2 -1] + s[len(s) // 2]
     
 
-# def wave(people):
-#     result = []
-    
-
-#     for char in people:
-#         string = ''
-#         for char in range(people):
-            
-
-#     return people[2].upper()
-    # for char in range(people):
-    #     string = people[char]
+def wave(people):
+    result = []
+    for i in range(len(people)):
+        string = ''
+        for j in range(len(people)):
+            if j == i:
+                string += people[j].upper()
+            else:
+                string += people[j]
+        result.append(string)
+        string = ''
+    return result
         
 
 print(wave('hello'))
