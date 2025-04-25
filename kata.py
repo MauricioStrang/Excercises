@@ -739,4 +739,17 @@ def wave(people):
     return result
         
 
-print(wave('hello'))
+def to_jaden_case(string):
+        result = []
+        new_string = ''
+        for char in string:
+            if char != ' ':
+                new_string += char
+            else:
+                result.append(new_string)
+                new_string = ''
+
+        return result
+
+print(to_jaden_case("How can mirrors be real if our eyes aren't real"))
+            
