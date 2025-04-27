@@ -739,17 +739,12 @@ def wave(people):
     return result
         
 
-def to_jaden_case(string):
-        result = []
-        new_string = ''
-        for char in string:
-            if char != ' ':
-                new_string += char
-            else:
-                result.append(new_string)
-                new_string = ''
+def to_alternating_case(string):
+    if string.upper() in string:
+        return string.lower()
+    return string.upper()
+    
 
-        return result
 
-print(to_jaden_case("How can mirrors be real if our eyes aren't real"))
+print(to_alternating_case('hello world'))
             
