@@ -745,12 +745,19 @@ def to_alternating_case(string):
     return string.upper()
     
 
-def row_sum_odd_numbers(n):
-    numbers = [1]
+def row_sum_odd_numbers(row):
+    numbers = []
     result = 1
-    for i in range(n):
-        result += 2
-    return result
+    #Iterating each row and summing the result to be equal the first numbers of the selected row
+    for i in range(row):
+        for j in range(i):
+            result +=2
+    #Now that we are in the selected row, we put each odd number in the row into an array
+    for k in range(row):
+        numbers.append(result)
+        result +=2
+    #Then we just sum the numbers together
+    return sum(numbers)
 
-print(row_sum_odd_numbers(3))
+print(row_sum_odd_numbers(13))
             
