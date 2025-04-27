@@ -745,6 +745,12 @@ def to_alternating_case(string):
     return string.upper()
     
 
+def row_sum_odd_numbers(n):
+    numbers = [1]
+    result = 1
+    for i in range(n):
+        result += 2
+    return result
 
-print(to_alternating_case('hello world'))
+print(row_sum_odd_numbers(3))
             
