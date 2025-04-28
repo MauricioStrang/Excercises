@@ -759,5 +759,27 @@ def row_sum_odd_numbers(row):
     #Then we just sum the numbers together
     return sum(numbers)
 
-print(row_sum_odd_numbers(13))
+
+def first_non_consecutive(arr):
+    counter = arr[0] - 1
+    for num in arr:
+        if num - 1 != counter:
+            return num
+        counter +=1
+
+
+def final_grade(exam, projects):
+    if exam > 90 or projects > 10:
+        return 100
+    if exam > 75 and projects > 5:
+        return 90
+    if exam > 50 and projects > 2:
+        return 75
+    return 0
+
+
+
+def find_even_index(arr):
+    pass
+print(first_non_consecutive([1,2,3,4,6,7,8]))
             
