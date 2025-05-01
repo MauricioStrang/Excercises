@@ -786,6 +786,20 @@ def binary_array_to_number(arr):
     return s
 
 
+def arithmetic(a, b, operator):
+    
+    if operator == 'add':
+        return a + b
+    
+    elif operator == 'subtract':
+        return a - b
+       
+    elif operator == 'multiply':
+        return a * b
+    elif operator == 'divide':
+        return a / b
+    
+
 def find_even_index(arr):
     reversed = arr.reversed()
     sum = 0
