@@ -778,14 +778,6 @@ def final_grade(exam, projects):
     return 0
 
 
-def binary_array_to_number(arr):
-    b = ''
-    for num in arr:
-        b += str(num)
-    s = int(b, 2).to_bytes(len(b) // 8, 'big').decode()
-    return s
-
-
 def arithmetic(a, b, operator):
     
     if operator == 'add':
@@ -800,12 +792,10 @@ def arithmetic(a, b, operator):
         return a / b
     
 
-def find_even_index(arr):
-    reversed = arr.reversed()
-    sum = 0
-    for num in range(len(arr)):
-        if arr[num] + reversed[num] == sum:
-            return num
-    pass
-print(binary_array_to_number([1,1,1,1]))
-            
+def solution(nums):
+    if nums:
+        return sorted(nums)
+    else:
+        return []
+
+print(solution([1,2,10,5,3]))
