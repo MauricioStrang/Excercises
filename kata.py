@@ -799,15 +799,19 @@ def solution(nums):
         return []
 
 
+#Using dictionary in this solution
 def duplicate_count(text):
-    count = 0
-    repeated = ''
-    for char in text:
-        if char not in repeated:
-            for ch in range(text):
-
-
-    return count
-     
-
+    s = text.lower()
+    counts= {}
+    duplicates =0
+    for char in s:
+        if char in counts:
+            counts[char] += 1
+        else:
+            counts[char] = 1
+    
+    for char in counts:
+        if counts[char] > 1:
+            duplicates +=1
+    return duplicates
 print(duplicate_count('indivisibility'))
