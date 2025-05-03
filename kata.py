@@ -798,4 +798,16 @@ def solution(nums):
     else:
         return []
 
-print(solution([1,2,10,5,3]))
+
+def duplicate_count(text):
+    count = 0
+    repeated = ''
+    for char in text:
+        if char not in repeated:
+            for ch in range(text):
+
+
+    return count
+     
+
+print(duplicate_count('indivisibility'))
