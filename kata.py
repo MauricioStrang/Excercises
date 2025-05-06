@@ -825,3 +825,8 @@ def quarter_of(month):
         return 3
     elif month in range(10, 13):
         return 4
+    
+
+#Need to start using more of this
+def update_light(current):
+    return {"green": "yellow", "yellow": "red", "red": "green"}[current]
