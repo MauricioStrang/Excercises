@@ -830,3 +830,23 @@ def quarter_of(month):
 #Need to start using more of this
 def update_light(current):
     return {"green": "yellow", "yellow": "red", "red": "green"}[current]
+
+
+def decrypt(encrypted_text, n):
+    new_text = encrypted_text 
+    counter = 1
+    while counter <= n:
+        even = ''
+        odd = ''
+        for i in range(len(new_text)):
+            if i % 2 == 0:
+                even += new_text[i]
+            else:
+                odd += new_text[i]
+        print(odd)
+        print(even)
+        new_text = odd + even 
+        counter +=1
+    return new_text 
+
+print(decrypt("01234", 3))
