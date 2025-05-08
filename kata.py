@@ -849,4 +849,10 @@ def decrypt(encrypted_text, n):
         counter +=1
     return new_text 
 
-print(decrypt("01234", 3))
+
+
+def is_palindrome(s):
+    return s.lower() == ''.join(list(reversed(s.lower())))
+
+
+print(is_palindrome('Abba'))
