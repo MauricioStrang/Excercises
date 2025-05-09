@@ -850,9 +850,14 @@ def decrypt(encrypted_text, n):
     return new_text 
 
 
-
 def is_palindrome(s):
     return s.lower() == ''.join(list(reversed(s.lower())))
 
 
-print(is_palindrome('Abba'))
+def sum_str(a, b):
+    if a == '':
+        a = 0
+    if b == '':
+        b = 0
+    result = int(a) + int(b)
+    return str(result)
